@@ -1,0 +1,32 @@
+.header{
+    background-color: darkturquoise;
+    color: cyan;
+}
+.header:hover{
+     background-color: brown;
+     color: azure;
+}
+#one{
+    color: blueviolet;
+}
+#two{
+    color: aqua;
+}
+#three,#one{
+   color: chartreuse; 
+}
+*{
+    color: cornflowerblue;
+}
+.link{
+    text-decoration: none;
+    color: darkgreen;
+    background-color: chocolate;
+    padding:  10px;
+    border-radius: 10px;
+}
+.link:hover{
+    color:red;
+    background-color: green;
+}
+
