@@ -1,50 +1,114 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>KPR CAS 2025</title>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        h2{
-            color: darkmagenta;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Student Form</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color:pink
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-container {
+      background-color:blueviolet;
+      padding: 20px 30px;
+      border-radius: 5px;
+      width: 200px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color:orange;
+      color:black;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color:blueviolet;
+    }
+
+    .output {
+      margin-top: 30px;
+      background-color: #e7f3fe;
+      padding: 20px;
+      border-left: 5px solid #2196F3;
+    }
+  </style>
 </head>
-
 <body>
-    <script>
-        console.log("hello world");
-        var a;
-        a=10;
-        var b=20;
-        console.log(a+b)
-        console.log(a-b)
-        console.log(a*b)
-        console.log(a/b)
-    </script>
-    <h1 style="color: red; font-size: 55px;">HELLO KPR</h1>
-    <h2>CT</h2>
-    <H3>IT</H3>
-    <H4>BCA</H4>
-    <h5>hello</h5>
-    <h6 style="color: darkcyan; font-size: 45px;">KPR CAS</h6>
-    <P class="header"> <i>ipsum</i> <strong>dolor</strong>  sit amet<br><em><u>constrcutor</u></em><q>tadipisicing eli</q>  tadipisicing eli. Inventore, recusandae placeat sed ut culpa similiq  adipisicing elit. Inventore, recusandae placeat sed ut culpa similique
-        eum et dicta voluptate pariatur incidunt nobis fuga molestiae obcaecati dolores, ratione at? Eveniet, molestias?
-    </P>
-    <a class="link linkone" href="https://www.instagram.com">INSTAGRAM</a>
-    <a  class="link" href="home.html">home</a>
-    <ol>
-        <li id="one">BCA</li>
-        <li id="two">CT</li>
-        <li id="three">IT</li>
-    </ol>
-    <ul>
-        <li>IT</li>
-        <li>CT</li>
-        <li>BCA</li>
-    </ul>
 
-</html>
+  <h2>Student Information Form</h2>
+
+  <div class="form-container">
+    <form id="studentForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="class">Class:</label>
+      <input type="text" id="class" required>
+
+      <label for="rollnumber">Roll Number:</label>
+      <input type="text" id="rollnumber" required>
+
+      <label for="department">Department:</label>
+      <input type="text" id="department" required>
+
+      <label for="college">college</label>
+      <input type="text" id="college"required>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    document.getElementById("studentForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form from submitting to server
+
+      // Get form values
+      const name = document.getElementById("name").value;
+      const studentClass = document.getElementById("class").value;
+      const roll = document.getElementById("rollnumber").value;
+      const dept = document.getElementById("department").value;
+
+      // Display the data
+      document.getElementById("output").innerHTML = `
+        <h3>Submitted Information:</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Class:</strong> ${studentClass}</p>
+        <p><strong>Roll Number:</strong> ${roll}</p>
+        <p><strong>Department:</strong> ${dept}</p>
+      `;
+    });
+  </script>
+
 </body>
-
 </html>
+
